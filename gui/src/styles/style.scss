@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
 
+//Media sizes
+$media-lg: 1200px;
+$media-md: 992px;
+$media-sm: 768px;
+$media-xs: 576px;
+
 $grey-100: #FFFEFD;
 $grey-200: #F4F6F8;
 $grey-300: #E5E7EB;
@@ -34,9 +40,6 @@ code {
 
 #root {
   height: 100%;
-}
-
-.container {
   flex: 1;
   display: flex;
   background-color: $grey-300; 
@@ -48,15 +51,12 @@ code {
 
 // ANCHOR Navbar
 .navbar {
+  @extend .container;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  height: 50px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  height: 50px;  
 
   &__logo {
     padding-right: 30px;
@@ -140,9 +140,41 @@ code {
 // ANCHOR Content
 .content {
   background-color: $grey-200;
-  width: 80%;
-  height: auto;
+  height: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-top: 20px;
+}
+
+// ANCHOR Container
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: $media-xs) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: $media-sm) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: $media-md) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: $media-lg) {
+  .container {
+    max-width: 1140px;
+  }
 }
