@@ -73,6 +73,7 @@ code {
     justify-content: left;
     align-items: center;
     height: 100%;
+    cursor: pointer;
 
 
     &__item {
@@ -90,6 +91,11 @@ code {
       &--active {
         color: $grey-600;
         background-color: $grey-300;
+      }
+
+      &:not(&--active):hover{
+        color: $grey-600;
+        background-color: $grey-200;
       }
     }
   }
