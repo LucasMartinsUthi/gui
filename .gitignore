@@ -99,8 +99,4 @@ RNTester/Pods/*
 
 # Visual studio
 .vscode
-<<<<<<< HEAD
 .vs
-=======
-.vs
->>>>>>> b14ac60122474c84f78cbba44dc0849d30e481d3
