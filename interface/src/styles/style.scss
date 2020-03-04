@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+
+//Media sizes
+$media-lg: 1200px;
+$media-md: 992px;
+$media-sm: 768px;
+$media-xs: 576px;
+
+$grey-100: #FFFEFD;
+$grey-200: #F4F6F8;
+$grey-300: #E5E7EB;
+$grey-400: #B4B9C1;
+$grey-500: #707680;
+$grey-600: #393C3F;
+$grey-700: #2A2D30;
+
+$green-100: #DEF4EA;
+$green-200: #92DBBA;
+$green-300: #15B96F;
+$green-400: #1c8656;
+
+// TODO Cores para amarelo e vermelho
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $grey-600;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  background-color: $grey-300; 
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+}
+
+// ANCHOR Navbar
+.navbar {
+  @extend .container;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;  
+
+  &__logo {
+    padding-right: 30px;
+    height: 100%;
+
+    & img {
+      height: 100%;
+    }
+  }
+  
+  &__nav {
+    flex: 5;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+
+
+    &__item {
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: $grey-500;
+      letter-spacing: 0.025em;
+      height: 100%;
+      border-radius: 10px 10px 0 0;
+
+      &--active {
+        color: $grey-600;
+        background-color: $grey-300;
+      }
+    }
+  }
+
+  &__button{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    & button {
+      @extend .btn, .btn-success;
+    }    
+  }
+}
+
+// ANCHOR Btn
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  outline: none;
+
+  &-success {
+    color: $green-300;
+    background: $green-100;
+  
+    &:hover {
+      color: $green-400;
+      background: $green-200;
+    }
+  }
+
+  // TODO Criar buttons de error e warning
+}
+
+// ANCHOR Content
+.content {
+  background-color: $grey-200;
+  height: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 20px;
+}
+
+// ANCHOR Container
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: $media-xs) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: $media-sm) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: $media-md) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: $media-lg) {
+  .container {
+    max-width: 1140px;
+  }
+}
