@@ -1,5 +1,5 @@
 # Furgbol GUI
-This project is a web-based GUI for controlling Robocup's VSSS Furgbol software.
+This project is a web-based GUI for controlling Robocup's Furgbol software.
 
-## Contents
+# Contents
 Upcoming.
