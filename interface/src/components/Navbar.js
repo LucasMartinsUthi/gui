@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../img/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
+import Button from './Button';
 
 export default class Navbar extends Component {
     state = { 
@@ -28,9 +29,7 @@ export default class Navbar extends Component {
 
                     <div className="navbar__button">
                         {/* TODO Esse botão pode virar um component que recebe como propriedade um callback */}
-                        <button href="#">
-                            <FontAwesomeIcon icon={faPlay}/>
-                        </button>
+                        <Button toggleIcons={["faPlay", "faPause"]}/>
                     </div>
                 </div>
             </div>
