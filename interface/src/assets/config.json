@@ -1,0 +1,28 @@
+{
+    "playing": true,
+    "environment": [
+        {
+            "id": 1,
+            "color": "green",
+            "role": "goalkeeper",
+            "max linear velocity": 100,
+            "max angular velocity": 50
+        },
+
+        {
+            "id": 2,
+            "color": "magenta",
+            "role": "centerback",
+            "max linear velocity": 100,
+            "max angular velocity": 50
+        },
+
+        {
+            "id": 3,
+            "color": "red",
+            "role": "striker",
+            "max linear velocity": 100,
+            "max angular velocity": 50
+        }
+    ]
+}

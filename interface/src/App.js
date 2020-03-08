@@ -1,15 +1,8 @@
 import React from 'react';
 import './styles/style.scss';
 import Navbar from './components/Navbar';
-import Rest from './Rest'
 
 export default class App extends React.Component {
-
-    // Rest arquivo onde fica as funções da api
-    componentDidMount() {
-        Rest("getContacts")
-        console.log(Rest("saveContacts", "data"))
-    }
 
     render() {
         return (

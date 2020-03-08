@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import logo from '../assets/logo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-<<<<<<< HEAD
-import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
-import Button from './Button';
-=======
-import { faPlay } from '@fortawesome/free-solid-svg-icons'
->>>>>>> 1eacc8f2c32b1502066c50893c97668eb0d509a7
+import logo from '../assets/img/logo.png'
+import Button from './Button'
+import Rest from '../Rest'
 
 export default class Navbar extends Component {
     state = { 
-        
+        button: this.buttonInitState()   
     }
+
+    buttonInitState() { 
+        return + Rest("getPlaying")
+    } 
 
     render() { 
         return ( 
@@ -32,14 +31,10 @@ export default class Navbar extends Component {
                     </div>
 
                     <div className="navbar__button">
-                        {/* TODO Esse botão pode virar um component que recebe como propriedade um callback */}
-                        <Button toggleIcons={["faPlay", "faPause"]}/>
+                        <Button toggleIcons={["faPlay", "faPause"]} initState={this.state.button} callback={"setPlaying"} data="teste"/>
                     </div>
                 </div>
             </div>
         );
     }
 }
-
-// TODO 
-// toggle button
