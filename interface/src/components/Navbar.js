@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import logo from '../img/logo.png'
+import logo from '../assets/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+<<<<<<< HEAD
 import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
 import Button from './Button';
+=======
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+>>>>>>> 1eacc8f2c32b1502066c50893c97668eb0d509a7
 
 export default class Navbar extends Component {
     state = { 
